@@ -63,3 +63,14 @@
       (if (> accumated-size target)
         part
         (recur remaining (+ accumated-size (:size (first remaining))))))))
+
+(defn add-one-hundred
+  [num]
+  (+ num 100))
+
+(defn dec-maker
+  "create custom decrimenter"
+  [dec-by]
+  #(- % dec-by))
+
+(def dec7 (dec-maker 7))
